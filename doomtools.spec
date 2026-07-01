@@ -9,6 +9,7 @@ Source0: https://github.com/MTrop/DoomTools/releases/download/2026.06.28-RELEASE
 Source1: doomtools.desktop
 Source2: template.sh
 
+BuildRequires: javapackages-filesystem
 BuildRequires: ImageMagick
 Requires: java
 
@@ -51,10 +52,10 @@ install -d %{buildroot}/%{_datadir}/icons/hicolor/128x128/apps
 magick docs/doomtools-logo.ico[0] %{buildroot}/%{_datadir}/icons/hicolor/128x128/apps/doomtools.png
 
 %files
-/%{_bindir}/*
-/%{_javadir}/doomtools/doomtools.jar
-/%{_datadir}/applications/doomtools.desktop
-/%{_datadir}/icons/hicolor/128x128/apps/doomtools.png
+%{_bindir}/*
+%{_javadir}/doomtools/doomtools.jar
+%{_datadir}/applications/doomtools.desktop
+%{_datadir}/icons/hicolor/128x128/apps/doomtools.png
 %license docs/licenses/LICENSE.txt
 %doc docs/*.md docs/*.txt docs/changelogs/*
 
