@@ -56,6 +56,5 @@ rm %{buildroot}%{_datadir}/doc/woof/COPYING
 * Wed Jul 01 2026 Mia McMahill <electricbrass@proton.me> - 16.0.0-1
 - Update to Woof 16.0.0
 
-%changelog
 * Wed Jul 01 2026 Mia McMahill <electricbrass@proton.me> - 15.3.0-1
 - Initial COPR package
