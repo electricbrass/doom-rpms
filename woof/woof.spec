@@ -9,6 +9,7 @@ Source0: https://github.com/fabiangreffrath/woof/archive/refs/tags/woof_%{versio
 
 BuildRequires: cmake >= 3.15
 BuildRequires: gcc
+BuildRequires: gcc-c++
 BuildRequires: make
 
 BuildRequires: SDL3-devel >= 3.4.0
