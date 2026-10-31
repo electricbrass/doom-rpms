@@ -20,7 +20,7 @@ BuildRequires: cmake >= 3.15
 BuildRequires: gcc
 BuildRequires: gcc-c++
 BuildRequires: make
-BuildRequires: zlib-ng
+BuildRequires: zlib-ng-devel
 
 Requires: zlib-ng
 
