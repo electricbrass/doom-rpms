@@ -13,6 +13,7 @@ License: GPL-2.0-or-later
 URL:     https://elf-alchemist.github.io/elfbsp/
 
 Source: %{forgesource}
+Source1: https://codeload.github.com/elf-alchemist/libscanner/tar.gz/7655f74263471f440c41d08ad088cded215f07d9
 Patch0: use-system-zlib.patch
 
 BuildRequires: cmake >= 3.15
@@ -31,6 +32,9 @@ the Eureka level editor’s internal BSP code.
 
 %prep
 %forgeautosetup -p1
+
+mkdir -p library/scanner
+tar -xf %{SOURCE1} -C library/scanner --strip-components=1
 
 %build
 %cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_LTO=ON -DENABLE_HARDENING=ON
