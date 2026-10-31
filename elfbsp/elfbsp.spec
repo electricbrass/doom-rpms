@@ -4,10 +4,10 @@ Version: 1.3.0
 
 %global tag elfbsp_v%{version}
 
-%forgemeta -i -v
+%forgemeta
 
 name:    elfbsp
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Modern BSP tree builder for idTech1 games and source ports
 License: GPL-2.0-or-later
 URL:     https://elf-alchemist.github.io/elfbsp/
@@ -44,6 +44,7 @@ tar -xf %{SOURCE1} -C library/scanner --strip-components=1
 %cmake_install
 
 rm %{buildroot}%{_datadir}/doc/elfbsp/LICENSE.txt
+rm %{buildroot}%{_datadir}/applications/io.github.elf-alchemist.elfbsp.desktop
 
 %files
 %{_bindir}/*
@@ -51,5 +52,8 @@ rm %{buildroot}%{_datadir}/doc/elfbsp/LICENSE.txt
 %license LICENSE.txt
 
 %changelog
+* Sat Oct 31 2026 Mia McMahill <electricbrass@proton.me> - 1.3.0-2
+- Delete desktop file
+
 * Sat Oct 31 2026 Mia McMahill <electricbrass@proton.me> - 1.3.0-1
 - Initial COPR package
