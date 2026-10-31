@@ -4,7 +4,7 @@
 %forgemeta -i -v
 
 name:    elfbsp
-Version:
+Version: 1.3.0
 Release: 1%{?dist}
 Summary: Modern BSP tree builder for idTech1 games and source ports
 License: GPL-2.0-or-later
