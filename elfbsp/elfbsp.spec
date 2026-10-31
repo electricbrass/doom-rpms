@@ -7,7 +7,7 @@ Version: 1.3.0
 %forgemeta
 
 name:    elfbsp
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Modern BSP tree builder for idTech1 games and source ports
 License: GPL-2.0-or-later
 URL:     https://elf-alchemist.github.io/elfbsp/
@@ -37,7 +37,7 @@ mkdir -p library/scanner
 tar -xf %{SOURCE1} -C library/scanner --strip-components=1
 
 %build
-%cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_LTO=ON -DENABLE_HARDENING=ON
+%cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_LTO=ON -DENABLE_HARDENING=ON -DCMAKE_CXX_FLAGS=-fopenmp
 %cmake_build
 
 %install
@@ -52,6 +52,9 @@ rm %{buildroot}%{_datadir}/applications/io.github.elf-alchemist.elfbsp.desktop
 %license LICENSE.txt
 
 %changelog
+* Sat Oct 31 2026 Mia McMahill <electricbrass@proton.me> - 1.3.0-3
+- Build with openmp
+
 * Sat Oct 31 2026 Mia McMahill <electricbrass@proton.me> - 1.3.0-2
 - Delete desktop file
 
