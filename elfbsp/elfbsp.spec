@@ -13,7 +13,7 @@ License: GPL-2.0-or-later
 URL:     https://elf-alchemist.github.io/elfbsp/
 
 Source: %{forgesource}
-Patch0: patches/use-system-zlib.patch
+Patch0: use-system-zlib.patch
 
 BuildRequires: cmake >= 3.15
 BuildRequires: gcc
