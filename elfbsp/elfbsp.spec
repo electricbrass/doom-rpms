@@ -37,7 +37,7 @@ mkdir -p library/scanner
 tar -xf %{SOURCE1} -C library/scanner --strip-components=1
 
 %build
-%cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_LTO=ON -DENABLE_HARDENING=ON -DCMAKE_CXX_FLAGS=-fopenmp
+%cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_LTO=ON -DENABLE_HARDENING=ON
 %cmake_build
 
 %install
