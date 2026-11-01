@@ -1,13 +1,13 @@
 %global forgeurl https://github.com/elf-alchemist/elfbsp/
 
-Version: 1.3.0
+Version: 1.3.1
 
 %global tag elfbsp_v%{version}
 
 %forgemeta
 
 name:    elfbsp
-Release: 3%{?dist}
+Release: 1%{?dist}
 Summary: Modern BSP tree builder for idTech1 games and source ports
 License: GPL-2.0-or-later
 URL:     https://elf-alchemist.github.io/elfbsp/
@@ -52,6 +52,9 @@ rm %{buildroot}%{_datadir}/applications/io.github.elf-alchemist.elfbsp.desktop
 %license LICENSE.txt
 
 %changelog
+* Sat Oct 31 2026 Mia McMahill <electricbrass@proton.me> - 1.3.1-1
+- Update to upstream release 1.3.1
+
 * Sat Oct 31 2026 Mia McMahill <electricbrass@proton.me> - 1.3.0-3
 - Build with openmp
 
